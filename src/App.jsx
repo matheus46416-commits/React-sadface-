@@ -5,6 +5,7 @@ import Contador from "./components/Contador";
 //import Footer from './components/Footer';
 
 // Mock de dados (Simulando a resposta da API do TMDB)
+let number = 0;
 const mockFilmes = [
     {id: 278, title: "Um sonho de liberdade",nota: 7, ano: "1994",
     imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYa3hRkjtSUwAu5Fo3-FVx4oA2S7aVCEZO6iznm2EWpw&s=10",
@@ -42,8 +43,9 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
-      <Contador/>
+      <p>{number}</p>
       <Header busca={busca} setBusca={setBusca} />
+      <Contador number={0} />
 
       {/* Container Principal */}
       <main className="flex-grow max-w-7xl mx-auto px-6 w-full">

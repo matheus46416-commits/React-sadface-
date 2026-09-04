@@ -1,6 +1,14 @@
-function Contador(){
-    let number = 0;
-    return (<><button onClick={number++}>Botão</button><p>{number}</p></>
+import { useState } from 'react';
+
+function Contador() {
+    /**/
+    const [number, setContador] = useState(0)
+
+    return (
+        <button
+        onClick={() => setContador(number + 1)}>
+            {number}
+        </button>
     );
 }
 
