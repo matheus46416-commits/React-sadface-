@@ -1,4 +1,14 @@
+import { useState } from "react";
+
+
 function CardFilme({ filme }) {
+
+    const [favorito,setFavorito] = useState(false);
+
+    const toggleFavorito = () => {
+        setFavorito((prevState) => !prevState)
+    };
+
     return (
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col h-full">
             <img
@@ -15,6 +25,7 @@ function CardFilme({ filme }) {
                     </span>
                 </div>
             </div>
+            <button onClick={toggleFavorito} className={favorito ? "bg-yellow-500 text-black" : "bg-zinc-800 text-white"}> {favorito ? 'Favorito' : 'Favoritar'}</button>
         </div>
     );
 }

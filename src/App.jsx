@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import CardFilme from "./components/CardFilme";
 import Contador from "./components/Contador";
+import Perfil from "./components/Perfil";
 //import Footer from './components/Footer';
 
 // Mock de dados (Simulando a resposta da API do TMDB)
@@ -43,9 +44,9 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
-      <p>{number}</p>
       <Header busca={busca} setBusca={setBusca} />
-      <Contador number={0} />
+      <Contador/>
+      <Perfil/>
 
       {/* Container Principal */}
       <main className="flex-grow max-w-7xl mx-auto px-6 w-full">
